@@ -1,18 +1,20 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css'
-import Header from './Components/Header';
-import Navigation from './Components/Navigation';
-import About from './Components/About';
-
+import 'semantic-ui-css/semantic.min.css'
+import "./index.css";
+import HeadEl from "./Components/HeadEl";
+import Navigation from "./Components/Navigation";
+import About from "./Components/About";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import AboutSem from './Components/AboutSem';
 
 function App() {
-
   return (
-    <div className="App container-fluid bg-dark">
-      <Header />
-      <Navigation />
-      <About />
-    </div>
+    <Router> 
+        <HeadEl />
+        <Navigation />
+        <Switch>
+        <AboutSem />
+        </Switch>
+     </Router>
   );
 }
 

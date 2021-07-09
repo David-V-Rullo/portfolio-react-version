@@ -1,6 +1,6 @@
 import headshot from '../images/Headshot.jpg'
 
-const Header = () => {
+const HeadEl = () => {
   return (
     <div className="container bg-dark text-light w-100">
       <div className="row justify-content-md-between">
@@ -25,4 +25,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeadEl

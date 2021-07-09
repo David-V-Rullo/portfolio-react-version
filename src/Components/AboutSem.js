@@ -1,21 +1,23 @@
+import React from "react";
+import { Grid, Image, Container, Header } from "semantic-ui-react";
 import Findme from "./Findme";
-
-const About = () => {
+const AboutSem = () => {
   return (
-    <div className="container-fluid bg-dark text-light w-100">
-      <div className="row justify-content-lg-between">
-        <section className="col-md-2  bg-primary p-4">
-          <p>
-            I am an aspiring web developer who is currently attending the
-            Rutgers University Full Stack Bootcamp. I am going blind and have
-            had to abandon my law career for a career that is much more
-            favorable to working from home
-          </p>
-        </section>
-        <br />
-        <section className="col-md-8 pt-4 mx-auto">
-          <h4>Background</h4>
-          <div className="pr-2 w-75">
+    <Container>
+      <Grid stackable columns={3} >
+        <Grid.Row>
+          <Grid.Column>
+            <Header size='medium'>About Me:</ Header>
+            <p>
+              I am an aspiring web developer who is currently attending the
+              Rutgers University Full Stack Bootcamp. I am going blind and have
+              had to abandon my law career for a career that is much more
+              favorable to working from home
+            </p>
+     
+          </Grid.Column>
+          <Grid.Column>
+              <Header size='large'>Background</Header>
             <p>
               I got my first computer when I was in the eigth grade. This was,
               to this day, the best Christmas gift I ever received. I poured
@@ -53,12 +55,15 @@ const About = () => {
             </p>
             <br />
             <p>I look forward to seeing what this new career has to offer!</p>
-          </div>
-        </section>
-        <Findme />
-      </div>
-    </div>
+          </Grid.Column>
+          <Grid.Column>
+              <p>This is where the Find me elements will go</p>
+              <Findme />
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+    </Container>
   );
 };
 
-export default About;
+export default AboutSem;

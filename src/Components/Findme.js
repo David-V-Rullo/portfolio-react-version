@@ -1,16 +1,39 @@
-import React from 'react'
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
+import React from "react";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { Header, List, Container } from "semantic-ui-react";
 const Findme = () => {
-    return (
-        <div className="col-2 m-auto">
-            <h4>Find Me:</h4>
-            <ul className="list-group bg-dark text-light">
-                <li className="list-group-item bg-dark"><FaGithub size="2em" />GitHub</li>
-                <li className="list-group-item bg-dark"><FaLinkedinIn size="2em" />LinkedIn</li>
-                <li className="list-group-item bg-dark"><FaGithub size="2em" />GitHub</li>
-            </ul>
-        </div>
-    )
-}
+  return (
+    <Container textAlign="right">
+      <List divided relaxed>
+        <List.Item>
+          <List.Content>
+            <List.Header>
+              GitHub
+              <List.Icon name="github" size="large" verticalAlign="middle" />
+            </List.Header>
+          </List.Content>
+        </List.Item>
+        <List.Item>
+          <List.Content>
+            <List.Header as="a">
+              Linkedin{" "}
+              <List.Icon name="linkedin" size="large" verticalAlign="middle" />
+            </List.Header>
+          </List.Content>
+        </List.Item>
+        <List.Item>
+          
+          <List.Content>
+            <List.Header as="a">Stack Overflow<List.Icon
+            name="stack overflow"
+            size="large"
+            verticalAlign="middle"
+          /></List.Header>
+          </List.Content>
+        </List.Item>
+      </List>
+    </Container>
+  );
+};
 
-export default Findme
+export default Findme;
