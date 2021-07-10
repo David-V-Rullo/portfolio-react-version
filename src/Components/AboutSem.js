@@ -1,23 +1,23 @@
 import React from "react";
-import { Grid, Image, Container, Header } from "semantic-ui-react";
+import { Grid, Image, Container, Header, Divider } from "semantic-ui-react";
 import Findme from "./Findme";
 const AboutSem = () => {
   return (
     <Container>
-      <Grid stackable columns={3} >
+      <Grid columns='equal' stackable columns={3}>
         <Grid.Row>
-          <Grid.Column>
-            <Header size='medium'>About Me:</ Header>
+          <Grid.Column width={3} style={{backgroundColor: 'navy', color: 'antiquewhite', marginRight:'3em', padding:'2em'}}>
+            <Header size='medium' style={{color: 'antiquewhite'}}>About Me:</ Header>
             <p>
               I am an aspiring web developer who is currently attending the
               Rutgers University Full Stack Bootcamp. I am going blind and have
               had to abandon my law career for a career that is much more
               favorable to working from home
             </p>
-     
           </Grid.Column>
-          <Grid.Column>
+          <Grid.Column width={8}>
               <Header size='large'>Background</Header>
+              <Divider />
             <p>
               I got my first computer when I was in the eigth grade. This was,
               to this day, the best Christmas gift I ever received. I poured
@@ -56,8 +56,8 @@ const AboutSem = () => {
             <br />
             <p>I look forward to seeing what this new career has to offer!</p>
           </Grid.Column>
-          <Grid.Column>
-              <p>This is where the Find me elements will go</p>
+          <Grid.Column width={4}>
+              <Header size='large' textAlign='center'>Find Me:</Header>
               <Findme />
           </Grid.Column>
         </Grid.Row>
