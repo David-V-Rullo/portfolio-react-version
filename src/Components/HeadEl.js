@@ -1,28 +1,51 @@
-import headshot from '../images/Headshot.jpg'
-
+import headshot from "../images/Headshot.jpg";
+import { Header, Image, Grid, Container, Divider } from "semantic-ui-react";
 const HeadEl = () => {
   return (
-    <div className="container bg-dark text-light w-100">
-      <div className="row justify-content-md-between">
-        <div className="col-md-6 my-auto offset-1">
-          <h1>
-            Hi, <br></br>my name is David Rullo
-          </h1>
-          <p>
-            This is my portfolio. Feel free to look around. Remember - If you
-            break it, you buy it!
-          </p>
-        </div>
-        <div className="col-md-4" id="profile-pic">
-          <img
-            src={headshot}
-            className="img-fluid"
-            alt="Profile pic of author"
-          />
-        </div>
-      </div>
+    <div>
+      <Container
+        fluid
+        style={{
+          backgroundColor: "navy",
+        }}
+      >
+        <Grid padded columns="equal" verticalAlign='middle'>
+          <Grid.Row columns={3}>
+            <Grid.Column
+              size={7}
+              verticalAlign="middle"
+              style={{
+                padding: "2em",
+                paddingBottom: "8em",
+                margin: "2em",
+                marginRight: "2em",
+              }}
+            >
+              <Header  style={{ color: "antiquewhite", fontSize: '3rem' }}>
+                Hi, My Name is David Rullo
+                <Divider />
+                <Header.Subheader style={{ color: "antiquewhite", fontSize: '2rem' }}>
+                  I am an aspiring Web Developer and this is my portfolio.
+                </Header.Subheader>
+              </Header>
+            </Grid.Column>
+            <Divider hidden />
+            <Grid.Column size={3}>
+              <Image
+                verticalAlign="middle"
+                bordered
+                rounded
+                size="medium"
+                src={headshot}
+                alt="My wonderful headshot"
+                style={{ margin: "1em", marginLeft: "8em" }}
+              />
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </Container>
     </div>
   );
 };
 
-export default HeadEl
+export default HeadEl;
