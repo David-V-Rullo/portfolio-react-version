@@ -9,10 +9,10 @@ const HeadEl = () => {
           backgroundColor: "navy",
         }}
       >
-        <Grid padded columns="equal" verticalAlign='middle'>
+        <Grid centered padded columns="equal" verticalAlign='middle'>
           <Grid.Row columns={3}>
             <Grid.Column
-              size={7}
+              width={7}
               verticalAlign="middle"
               style={{
                 padding: "2em",
@@ -21,16 +21,16 @@ const HeadEl = () => {
                 marginRight: "2em",
               }}
             >
-              <Header  style={{ color: "antiquewhite", fontSize: '3rem' }}>
-                Hi, My Name is David Rullo
+              <Header  style={{ color: "antiquewhite", fontSize: '4rem' }}>
+                David V. Rullo
                 <Divider />
                 <Header.Subheader style={{ color: "antiquewhite", fontSize: '2rem' }}>
-                  I am an aspiring Web Developer and this is my portfolio.
+                  Full Stack Web Developer || Accessibility Advocate
                 </Header.Subheader>
               </Header>
             </Grid.Column>
             <Divider hidden />
-            <Grid.Column size={3}>
+            <Grid.Column width={3}>
               <Image
                 verticalAlign="middle"
                 bordered
