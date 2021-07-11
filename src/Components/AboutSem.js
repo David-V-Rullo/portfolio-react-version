@@ -3,10 +3,10 @@ import { Grid, Image, Container, Header, Divider } from "semantic-ui-react";
 import Findme from "./Findme";
 const AboutSem = () => {
   return (
-    <Container>
-      <Grid columns='equal' stackable columns={3}>
+    <Container fluid>
+      <Grid columns='equal' relaxed padded centered stackable columns={3}>
         <Grid.Row>
-          <Grid.Column width={3} style={{backgroundColor: 'navy', color: 'antiquewhite', marginRight:'3em', padding:'2em'}}>
+          <Grid.Column width={2} style={{backgroundColor: 'navy', color: 'antiquewhite', marginRight:'3em', padding:'2em'}}>
             <Header size='medium' style={{color: 'antiquewhite'}}>About Me:</ Header>
             <p>
               I am an aspiring web developer who is currently attending the
@@ -15,9 +15,10 @@ const AboutSem = () => {
               favorable to working from home
             </p>
           </Grid.Column>
-          <Grid.Column width={8}>
+          <Grid.Column width={7}>
               <Header size='large'>Background</Header>
               <Divider />
+            <Container text>
             <p>
               I got my first computer when I was in the eigth grade. This was,
               to this day, the best Christmas gift I ever received. I poured
@@ -51,12 +52,13 @@ const AboutSem = () => {
               reevaluate what I wanted to do. Given my lifelong interest in
               computers and a newfound understanding of the difficulties that
               living with a disability can be, I decided to become a full-stack
-              web developer with a focus on UI/UX design and accessability.{" "}
+              web developer with a focus on UI/UX design and accessibility.{" "}
             </p>
             <br />
             <p>I look forward to seeing what this new career has to offer!</p>
+            </Container>
           </Grid.Column>
-          <Grid.Column width={4}>
+          <Grid.Column width={3}>
               <Header size='large' textAlign='center'>Find Me:</Header>
               <Findme />
           </Grid.Column>
