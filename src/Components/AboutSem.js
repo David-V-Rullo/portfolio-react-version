@@ -70,11 +70,11 @@ const AboutSem = () => {
             >
               Find Me:
             </Header>
-            <Button style={buttonStyle} fluid size="huge" color="black">
+            <Button href="https://github.com/David-V-Rullo" style={buttonStyle} fluid size="huge" color="black">
               <Icon name="github" size="large" />
               GitHub
             </Button>
-            <Button style={buttonStyle} fluid size="huge" color="black">
+            <Button href="https://www.linkedin.com/in/davidrullo/" style={buttonStyle} fluid size="huge" color="black">
               <Icon name="linkedin" color='blue' size="large" />
               LinkedIn
             </Button>
