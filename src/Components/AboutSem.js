@@ -1,7 +1,8 @@
 import React from "react";
-import { Grid, Image, Container, Header, Divider } from "semantic-ui-react";
-import Findme from "./Findme";
+import { Grid, Image, Container, Header, Divider, Button, Icon } from "semantic-ui-react";
 const AboutSem = () => {
+  const buttonStyle = {marginTop: '1rem', padding:'1.5rem'}
+  const listStyle = {fontSize: '2rem'}
   return (
     <Container fluid>
       <Grid columns='equal' relaxed padded centered stackable columns={3}>
@@ -16,9 +17,9 @@ const AboutSem = () => {
             </p>
           </Grid.Column>
           <Grid.Column width={7}>
-              <Header size='large'>Background</Header>
+              <Header textAlign='center' size='large'>Background</Header>
               <Divider />
-            <Container text>
+            <Container text style={{backgroundColor: 'antiquewhite', padding:'2rem', border:'2px solid navy'}}>
             <p>
               I got my first computer when I was in the eigth grade. This was,
               to this day, the best Christmas gift I ever received. I poured
@@ -58,10 +59,31 @@ const AboutSem = () => {
             <p>I look forward to seeing what this new career has to offer!</p>
             </Container>
           </Grid.Column>
-          <Grid.Column width={3}>
-              <Header size='large' textAlign='center'>Find Me:</Header>
-              <Findme />
-          </Grid.Column>
+          <Grid.Column>
+            <Header
+              size="huge"
+              style={{
+                backgroundColor: "navy",
+                color: "antiquewhite",
+                padding: ".7em",
+              }}
+            >
+              Find Me:
+            </Header>
+            <Button style={buttonStyle} fluid size="huge" color="black">
+              <Icon name="github" size="large" />
+              GitHub
+            </Button>
+            <Button style={buttonStyle} fluid size="huge" color="black">
+              <Icon name="linkedin" color='blue' size="large" />
+              LinkedIn
+            </Button>
+            <Button style={buttonStyle} fluid size="huge" color="black">
+              <Icon name="stack overflow" color='orange' size="large" />
+              Stack Overflow
+            </Button>
+            
+      </Grid.Column>
         </Grid.Row>
       </Grid>
     </Container>
